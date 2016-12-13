@@ -1,0 +1,97 @@
+/*formInscription*/
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html body {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.form {
+  background: rgb(15, 245, 210);
+  margin: 5em auto;
+  padding: 2em;
+  width: 60%;
+  border-radius: 2em;
+  box-shadow: 0.2em 0.2em 0.5em 0.5em rgb(51, 170, 152);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: rgb(19, 115, 100) !important;
+  text-align: center;
+  font-family: 'Nova Script', cursive !important;
+}
+
+label {
+  padding-left: 10%;
+}
+
+input {
+  display: block;
+  margin: 1em auto !important;
+  width: 80%;
+}
+
+.input {
+  display: block;
+  margin: 1em auto !important;
+  width: 80%;
+}
+
+.button {
+  background: rgb(139, 242, 8);
+  border-color: rgb(229, 241, 11);
+  border-radius: 1em;
+  width: 90%;
+  height: 3em;
+  color: white;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.button:active {
+  transform: scaleX(1.2);
+}
+
+.error {
+  border: 0.2em solid red;
+}
+
+.inscription {
+  text-align: center;
+}
+
+a {
+  display: block;
+  text-align: center;
+  margin: 1.5em auto;
+  color: rgb(23, 24, 111) !important;
+  font-size: 2em;
+  text-decoration: none !important;
+}
+
+footer {
+  padding: 2em;
+  background: rgb(15, 245, 210);
+  color: rgb(19, 115, 100);
+  text-align: center;
+}
+
+@media (max-width: 40em) {
+  .form {
+    width: 100%;
+    border-radius: 0;
+  }
+}

@@ -1,0 +1,67 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html body {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+table {
+  border: 0.2em solid rgb(44, 218, 28);
+  border-collapse: collapse;
+  margin: 2em auto;
+  text-align: center;
+  width: 80%;
+  box-shadow: 0.1em 0.1em 0.4em 0.4em rgb(44, 218, 28);
+}
+
+th,
+tr,
+td {
+  border: 0.1em solid rgb(44, 218, 28);
+}
+
+.totaux {
+  text-align: right;
+}
+
+.valid-button {
+  display: block;
+  width: 20%;
+  height: 3em;
+  margin: 2em auto;
+  color: white;
+  border: 0.1em solid rgb(44, 218, 28);
+  box-shadow: 0.2em 0.2em 0.5em 0.5em rgb(194, 250, 204);
+  background: rgb(44, 218, 28);
+}
+
+.modif-button {
+  display: block;
+  width: 20%;
+  height: 3em;
+  margin: 2em auto;
+  color: white;
+  border: 0.1em solid rgb(251, 121, 0);
+  box-shadow: 0.2em 0.2em 0.5em 0.5em rgb(250, 216, 194);
+  background: rgb(251, 121, 0);
+}
+
+.delete-button {
+  display: block;
+  width: 20%;
+  height: 3em;
+  margin: 2em auto;
+  color: white;
+  border: 0.1em solid rgb(193, 0, 35);
+  box-shadow: 0.2em 0.2em 0.5em 0.5em rgb(250, 194, 194);
+  background: rgb(193, 0, 35);
+}

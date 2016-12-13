@@ -1,0 +1,169 @@
+/*creationPanier*/
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: rgb(44, 218, 28) !important;
+  text-align: center;
+  font-family: 'Nova Script', cursive !important;
+}
+
+.head {
+  display: flex;
+}
+
+.panier {
+  margin: 2em auto;
+  padding: 0 0.5em;
+  width: 22%;
+  box-shadow: 0.2em 0.2em 0.5em 0.5em rgb(194, 250, 204);
+}
+
+.float-right {
+  float: right;
+}
+
+.glyphicon-arrow-right {
+  color: rgb(44, 218, 28);
+}
+
+.addArticle {
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+  width: 100%;
+  border: 0.1em solid grey;
+}
+
+.validPanier {
+  margin: 2em auto;
+  padding: 0.5em 1em;
+  width: 80%;
+  box-shadow: 0.2em 0.2em 0.5em 0.5em rgb(194, 250, 204);
+}
+
+.del-button {
+  border: 0;
+  background: 0;
+}
+
+.command-button {
+  display: block;
+  color: white;
+  border: 0.1em solid rgb(44, 218, 28);
+  box-shadow: 0.2em 0.2em 0.5em 0.5em rgb(194, 250, 204);
+  background: rgb(44, 218, 28);
+  float: right;
+}
+
+.comfirm-button {
+  display: block;
+  width: 20%;
+  margin: 2em auto;
+  color: white;
+  border: 0.1em solid rgb(44, 218, 28);
+  box-shadow: 0.2em 0.2em 0.5em 0.5em rgb(194, 250, 204);
+  background: rgb(44, 218, 28);
+}
+
+.statut {
+  position: absolute;
+  margin: 2em 5em;
+}
+
+.admin {
+  float: right;
+  width: 120%;
+  height: 8em;
+  margin: 50% -320%;
+  color: white;
+  border: 0.1em solid rgb(44, 218, 28);
+  border-radius: 4em;
+  box-shadow: 0.2em 0.2em 0.5em 0.5em rgb(194, 250, 204);
+  background: rgb(44, 218, 28);
+}
+
+.connect {
+  margin-bottom: 0.5em;
+  padding: 0.2em;
+  text-align: center;
+  width: 100%;
+  height: 8em;
+  border-radius: 4em;
+  box-shadow: 0.2em 0.2em 0.5em 0.5em rgb(194, 250, 204);
+}
+
+.deco {
+  color: white;
+  border: 0.1em solid rgb(44, 218, 28);
+  box-shadow: 0.2em 0.2em 0.5em 0.5em rgb(194, 250, 204);
+  background: rgb(44, 218, 28);
+}
+
+.cart {
+  display: inline-block;
+  margin: 5em;
+  padding: 1em;
+  box-shadow: 0.2em 0.2em 0.5em 0.5em rgb(194, 250, 204);
+}
+
+.qte {
+  width: 60%;
+}
+
+.glyphicon-shopping-cart {
+  background: white;
+  color: rgb(44, 218, 28);
+  font-size: 2em;
+  width: 2em;
+  height: 2em;
+  border: 0.1em solid rgb(194, 250, 204);
+  border-radius: 1em;
+  float: right;
+}
+
+.glyphicon-trash {
+  display: none;
+  color: red;
+  font-size: 0.75em;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 0.75em;
+}
+
+.alert {
+  background: rgb(240, 184, 173);
+  margin: 1em auto;
+  text-align: center;
+  color: red;
+  padding: 1.5em;
+  width: 50%;
+  box-shadow: 0.05em 0.05em 0.2em 0.2em red;
+}
+
+a {
+  display: block;
+  text-align: center;
+  margin: 1.5em auto;
+  color: rgb(23, 24, 111) !important;
+  font-size: 2em;
+  text-decoration: none !important;
+}
+
+footer {
+  padding: 2em;
+  background: rgb(194, 250, 204);
+  color: rgb(44, 218, 28);
+  text-align: center;
+}

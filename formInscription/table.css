@@ -1,0 +1,61 @@
+/*formInscription*/
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-align: center;
+  font-family: 'Nova Script', cursive !important;
+}
+
+table {
+  border: 0.2em solid black;
+  margin: 3em auto;
+  text-align: center;
+}
+
+th,
+tr,
+td {
+  border: 0.1em solid black;
+}
+
+form {
+  margin: 1em;
+  padding: 0.5em;
+}
+
+button {
+  background: white;
+  cursor: pointer;
+}
+
+.glyphicon-pencil {
+  color: orange;
+}
+
+.glyphicon-trash {
+  color: red;
+}
+
+footer {
+  padding: 2em;
+  background: rgb(15, 245, 210);
+  color: rgb(19, 115, 100);
+  text-align: center;
+}

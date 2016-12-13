@@ -1,0 +1,61 @@
+/*formArticle*/
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html body {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+table {
+  border: 0.2em solid rgb(27, 29, 244);
+  border-collapse: collapse;
+  margin: 0 auto;
+  width: 80%;
+  box-shadow: 0.1em 0.1em 0.4em 0.4em rgb(27, 29, 244);
+}
+
+th,
+tr,
+td {
+  text-align: center;
+  border: 0.1em solid rgb(27, 29, 244);
+}
+
+.ajout {
+  display: block;
+  margin: 1em auto;
+  width: 60%;
+  color: rgb(27, 29, 244) !important;
+  background: rgb(72, 232, 247);
+  border-radius: 4em;
+  border: 0.2em solid rgb(161, 153, 245);
+  box-shadow: 0.05em 0.05em 0.15em 0.15em rgb(240, 134, 223);
+  cursor: pointer;
+}
+
+form {
+  padding: 0.5em;
+}
+
+.modif {
+  background: white;
+  cursor: pointer;
+}
+
+.glyphicon-pencil {
+  color: orange;
+}
+
+.glyphicon-trash {
+  color: red;
+}

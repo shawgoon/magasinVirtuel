@@ -1,0 +1,37 @@
+/*index*/
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: rgb(19, 115, 100) !important;
+  text-align: center;
+  font-family: 'Nova Script', cursive !important;
+}
+
+a {
+  display: block;
+  text-align: center;
+  margin: 1.5em auto;
+  color: rgb(23, 24, 111) !important;
+  font-size: 2em;
+  text-decoration: none !important;
+}
+
+footer {
+  padding: 2em;
+  background: rgb(15, 245, 210);
+  color: rgb(19, 115, 100);
+  text-align: center;
+}
