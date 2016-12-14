@@ -8,8 +8,10 @@ $cart = $instance->query($sql)->fetchAll();
 
 <!-- requête de suppression d'article -->
 <?php
-$sql = "DELETE FROM panier WHERE panier.id AND panier.utilisateur_id = ".get_current_user_id()." AND panier.article_id = ".$_POST['cartId'];
-$icon =  $instance->exec($sql); var_dump($icon);?>
+ if (isset($_POST['articleDelete'])) {
+  $sql = "DELETE FROM panier WHERE panier.id AND panier.utilisateur_id = ".get_current_user_id()." AND panier.article_id = articleId"/*article_id"*/;
+  $trash =  $instance->exec($sql);
+  }?>
 
 <!-- entête du catalogue -->
 <div class="head">
@@ -44,18 +46,17 @@ $icon =  $instance->exec($sql); var_dump($icon);?>
             <span class="float-right"> <?php
               echo $article['prix']." €"; ?>
 
-
-              <button class="del-button" type="submit" name="articleDelete">
-                <input type="hidden" name="cartId" value="<?php echo $icon ?>">
-                <i class="glyphicon glyphicon-trash"></i>
-              </button>
-
+                <input type="hidden" name="articleId" value="<?php echo $article['id'] ?>">
+                <button class="del-button" action="catalogue.php" method="post" type="submit" name="articleDelete">
+                  <i class="glyphicon glyphicon-trash"></i>
+                </button>
+              
             </span>
-          </p> <?php } ?> <?php var_dump($article); ?>
+          </p> <?php } ?>
         </div>
         <form class="" action="validPanier.php" method="post">
           <button class="command-button" type="submit" name="validPanier">
-            <input type="hidden" name="validPanier" value="validPanier">
+            <input type="hidden" name="articleId" value="">
             Commander
           </button>
           <p>Pour valider c'est ici <span class="glyphicon glyphicon-arrow-right"></span></p>
@@ -85,15 +86,15 @@ $icon =  $instance->exec($sql); var_dump($icon);?>
 <?php for ($i=0; $i < count($cart); $i++) { ?>
 <div class="cart">
     <h4><?php echo $cart[$i]['nom']; ?></h4>
-    <img src="<?php echo $cart[$i]['image'] ?>" alt="">
+    <img src="" alt="">
     <p><?php echo $cart[$i]['description']; ?></p>
     <p><?php echo $cart[$i]['prix']." HT €"; ?></p>
     <label for="">Quantité</label>
   <form class="" action="ajoutInPanier.php" method="post">
     <input class="qte" type="number" name="quantite" value="">
-    <input type="hidden" name="articleId" value="<?php echo $cart[$i]['id'] ?>">
     <button class="glyphicon glyphicon-shopping-cart" type="submit" name="addArticle" value="addArticle">
-    </button> <?php var_dump($cart[$i]['image']); ?>
+      <input type="hidden" name="articleId" value="<?php echo $cart[$i]['id'] ?>">
+    </button>
   </form>
 </div>
 <?php } ?>

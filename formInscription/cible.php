@@ -1,7 +1,8 @@
 <?php include('../headerhtml.php') ?>
+<?php var_dump($_POST); ?>
 <?php
 
-if (!is_admin()) {die();};
+
 
 $utilisateur = array(
   "nom" => "",
@@ -19,7 +20,6 @@ $utilisateur = array(
 $sql = "SELECT * FROM utilisateur";
 $users = $instance->query($sql)->fetchAll();
 ?>
-
 
     <!-- si on veut créer un utilisateur -->
     <?php

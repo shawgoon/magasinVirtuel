@@ -11,7 +11,7 @@ if (!is_admin()) {die();};
    "nom" => "",
    "description" => "",
    "prix" => "",
-  //  "image" => ""
+   "image" => ""
  ];
 
  if (isset($_POST['articleUpdate'])) {
@@ -36,7 +36,7 @@ if (!is_admin()) {die();};
         <input id="description" type="text" name="description" placeholder="description de l'article" value="<?php echo $article['description'] ?>"></p>
         <p class="champs"><label for="">Prix</label><br>
         <input id="prix" type="number" name="prix" placeholder="10,00 " value="<?php echo $article['prix'] ?>"></p>
-        <p class="champs"><label for="">Image de l'article</label><br>
+        <p class="champs"><label for=""></label><br>
         <input id="image" type="file" name="image" value=""></p>
         <?php if ($hidden !== "") { echo $hidden; } ?>
         <?php echo $submit ?>

@@ -20,7 +20,6 @@ $listArticle = $instance->query($sql)->fetchAll();
           <th>Nom</th>
           <th>Description</th>
           <th>Prix</th>
-          <th>Image</th>
           <th>Actions</th>
         </tr>
       </thead>
@@ -31,7 +30,6 @@ $listArticle = $instance->query($sql)->fetchAll();
           <td><?php echo $listArticle[$i]['nom'] ?></td>
           <td><?php echo $listArticle[$i]['description'] ?></td>
           <td><?php echo $listArticle[$i]['prix']." €" ?></td>
-          <td><?php echo $listArticle[$i]['image'] ?></td>
           <td>
             <form class="" action="articleformulaire.php" method="post">
               <button class="modif" type="submit" name="articleUpdate" value="">

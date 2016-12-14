@@ -8,8 +8,7 @@ if (isset($_POST['addArticle']) && is_log()) {
   $sql = "SELECT *
   FROM panier
   WHERE utilisateur_id = ".get_current_user_id()
-  .'AND statut = "pending"'
-  ;
+  .'AND statut = "pending"';
   $lastPanier = $instance->query($sql);
 
   // si oui :
@@ -33,7 +32,7 @@ if (isset($_POST['addArticle']) && is_log()) {
     }
   // Si on veut modifier un article du panier.
   if (isset($articleQuantite)) {
-    // On calcul la nouvelle quantité, le nombre que l'on veut ajouter additionner au nobre actuel en BDD.
+    // On calcul la nouvelle quantité, le nombre que l'on veut ajouter additionner au nombre actuel en BDD.
     $newQuantite = $articleQuantite + $_POST['quantite'];
     $sql = "UPDATE panier SET quantite = ".$newQuantite."
     WHERE id = ".$panierId." AND article_id = ".$_POST['articleId'];

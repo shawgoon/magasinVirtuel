@@ -1,30 +1,14 @@
 <?php include('../headerhtml.php'); ?>
 <?php
+
 if (!is_admin()) {die();};
-
-// appel des variable d'ajout d'image
-
-$uploadDir = 'C:\wamp64\www\magasin\uploads/';
-$uploadFile = $uploadDir.basename($_FILES['image']['name']);
-$imgPath ='http://localhost/magasin/uploads/' . basename($_FILES['image']['name']);
-
-if (move_uploaded_file($_FILES['image']['tmp_name'], $uploadFile)) {
-  var_dump('success');
-} else {
-  var_dump('fail');
-}
 
 // requête d'ajout d'article
 
-  $query = $instance->prepare("INSERT INTO article (nom, description, prix, image)
-  VALUES (:nom, :description, :prix, :image)");
+  $sql = "INSERT INTO article (nom, description, prix)
+  VALUES ('".$_POST['nom']."','".$_POST['description']."','".$_POST['prix']."')";
 
-  $createSuccess = $query->execute(array(
-    "nom" => $_POST['nom'],
-    "description" => $_POST['description'],
-    "prix" => $_POST['prix'],
-    "image" => $imgPath
-  ));
+  $createSuccess = $instance->exec($sql);
 
   if ($createSuccess) {
     $message = "<h3>Article ajouté !</h3>";

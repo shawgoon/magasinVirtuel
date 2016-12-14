@@ -80,10 +80,11 @@ $utilisateur = array(
                 <option value="1">Client</option>
                 <option value="2">Administrateur</option>
               </select></p>
-            <input type="hidden" name="userId" value="<?php echo $utilisateur['id'] ?>">
+              <input type="hidden" name="userId" value="<?php echo $utilisateur['id'] ?>">
             <input class="button" type="submit" name="userUpdateForm" value="modifier">
           <?php } else { ?>
-            <input class="button" type="submit" name="userCreate" value="s'inscrire">
+            <input type="hidden" name="userCreate" value="true">
+            <input class="button" type="submit"value="s'inscrire">
           <?php
           }
            ?>
