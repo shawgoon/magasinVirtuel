@@ -1,8 +1,5 @@
 <?php include('../headerhtml.php') ?>
-<?php var_dump($_POST); ?>
 <?php
-
-
 
 $utilisateur = array(
   "nom" => "",
